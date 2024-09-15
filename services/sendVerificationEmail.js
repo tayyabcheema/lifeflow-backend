@@ -1,7 +1,7 @@
-const transporter = require('../config/emailConfig');
-const crypto = require('crypto');
 const dotenv = require('dotenv')
 dotenv.config()
+const transporter = require('../config/emailConfig');
+const crypto = require('crypto');
 
 const sendVerificationEmail = async (email, token) => {
   try {
@@ -13,7 +13,7 @@ const sendVerificationEmail = async (email, token) => {
     };
 
     await transporter.sendMail(mailOptions);
-    console.log('Verification email sent to:', email);
+    // console.log('Verification email sent to:', email);
   } catch (error) {
     console.error('Error sending verification email:', error);
     throw error;
