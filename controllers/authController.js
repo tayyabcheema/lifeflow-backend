@@ -332,7 +332,7 @@ const verifyEmail = async (req, res, next) => {
     await user.save();
 
     // Log the updated user for debugging
-    console.log("User after verification:", user);
+    // console.log("User after verification:", user);
 
     return res.status(200).json({
       success: true,
