@@ -5,6 +5,9 @@ const MONGO_URL = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MON
 
 const connectDB = async () => {
   try {
+    console.log(process.env.MONGO_USERNAME);
+    console.log(process.env.MONGO_PASS);
+    console.log(process.env.DB_NAME);
     await mongoose.connect(MONGO_URL);
     console.log("Mongodb connected successfully");
   } catch (error) {
