@@ -31,7 +31,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
-  res.send("Hello Nodejs");
+  res.send("Hello from Nodejs Application, The server has started! Welcome to the Lifeflow server");
 });
 
 // Route middlewares
